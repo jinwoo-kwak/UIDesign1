@@ -1,44 +1,59 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="ko">
 <head>
-  <title>Jinwoo Kwak | UI Design Programming 1</title>
-  <meta charset="utf-8" />
-  <link rel="stylesheet" type="text/css" href="assets/style.css">
-  <style>
-    li{
-      color: black;
-  </style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Jinwoo Kwak | Portfolio</title>
+<link rel="stylesheet" href="assets/style.css">
 </head>
-
 <body>
+<header class="site-header">
+  <a class="brand" href="#"><span>JK</span><strong>Jinwoo Kwak</strong></a>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#website-link">Website</a>
+  </nav>
+  <button id="themeToggle">🌙 Dark Mode</button>
+</header>
 
-  <!-- this is where my code is-->
-  <div id="grid">
-    <div id="left-column" class="scroll">  
+<main class="container">
+<section class="hero" id="about">
+<h1>곽진우 (Jinwoo Kwak)</h1>
+<p class="lead">UI Design Programming 1 · Personal Portfolio</p>
+<p>Indian curry를 좋아하고, KINO의 음악을 즐겨 듣습니다.</p>
+</section>
 
-      <pre>
-       /\_/\
-      ( o.o )
-       > ^ <
-      </pre>
-      <!-- my favorite pokemon -->
-      <!-- <img src="https://archives.bulbagarden.net/media/upload/2/24/Spr_2c_054.png" alt="Psyduck" /> -->
+<section class="card">
+<h2>Favorites</h2>
+<ul>
+<li>My favorite food is Indian curry</li>
+<li>My favorite song is Камчатка - КИНО</li>
+<li>My favorite website is <a href="https://namu.wiki/w/나무위키:대문">Namuwiki</a></li>
+</ul>
+</section>
 
-      <!-- about me-->
-      <h1><span class="cursive">곽</span>진우(Jinwoo Kwak/Чину Квак)</h1>
-      <p class="desc" style="font-family: helvetica; color: blue;">A short paragraph about you...</p>
-      <ul class="border" id="fav-list">
-        <li class="border">My favorite food is Indian curry</li>
-        <li>My favorite song is Камчатка(Kamchatka)-КИНО(KINO)</li>
-        <li>My favorite website is <a href="https://namu.wiki/w/나무위키:대문"><em>Namuwiki</em></a></li>
-      </ul>
-      <h3 class="border">Exercises<h3/>
-        <ul>
-          <li><a href="ascii_town/exterior-jinwookwak.html">ASCII Town</a></li>
-          <li><a href="myshelf/bookcase-jinwookwak.html">My Bookshelf</a></li>
-        </ul>
-    </div>
-  </div>
+<section class="card" id="projects">
+<h2>Projects</h2>
+<ul>
+<li><a href="ascii_town/exterior-jinwookwak.html">ASCII Town</a></li>
+<li><a href="myshelf/bookcase-jinwookwak.html">My Bookshelf</a></li>
+</ul>
+</section>
+
+<section class="card" id="website-link">
+<h2>Future Website</h2>
+<p>장기적으로 별도 사이트 주소가 생기면 아래 버튼이 실제 사이트로 연결될 수 있습니다.</p>
+<a class="button disabled" href="#" aria-disabled="true">Website Coming Soon</a>
+</section>
+</main>
+
+<script>
+const btn=document.getElementById('themeToggle');
+btn.onclick=()=>{
+ document.body.classList.toggle('dark');
+ btn.textContent=document.body.classList.contains('dark')?'☀️ Light Mode':'🌙 Dark Mode';
+};
+</script>
 </body>
 </html>
