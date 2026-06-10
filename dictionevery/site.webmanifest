@@ -1,0 +1,17 @@
+{
+  "name": "DictionEvery Install",
+  "short_name": "DictionEvery",
+  "description": "Install and download DictionEvery for supported desktop browsers.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "browser",
+  "background_color": "#f7f9fc",
+  "theme_color": "#284463",
+  "icons": [
+    {
+      "src": "./assets/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DictionEvery 설치</title>
+    <meta
+      name="description"
+      content="DictionEvery는 데스크톱 웹브라우저에서 단어를 선택해 뜻을 찾고, 단어장과 테스트로 복습하는 브라우저 확장 프로그램입니다."
+    />
+    <meta name="theme-color" content="#284463" />
+    <meta name="color-scheme" content="light" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="DictionEvery" />
+    <meta property="og:title" content="DictionEvery 설치" />
+    <meta
+      property="og:description"
+      content="DictionEvery는 데스크톱 웹브라우저에서 단어를 선택해 뜻을 찾고, 단어장과 테스트로 복습하는 브라우저 확장 프로그램입니다."
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="DictionEvery 설치" />
+    <meta
+      name="twitter:description"
+      content="DictionEvery는 데스크톱 웹브라우저에서 단어를 선택해 뜻을 찾고, 단어장과 테스트로 복습하는 브라우저 확장 프로그램입니다."
+    />
+    <link rel="icon" href="./assets/icon-128.png" />
+    <link rel="apple-touch-icon" href="./assets/icon-128.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./release.js"></script>
+    <script src="./site.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="DictionEvery 홈" data-i18n-aria="brandAria">
+        <span class="logo-orb brand-logo"><img src="./assets/icon-white.svg" alt="" /></span>
+        <span>DictionEvery</span>
+      </a>
+      <div class="header-actions">
+        <nav aria-label="주요 메뉴" data-i18n-aria="mainNavAria">
+          <a href="#install" data-i18n="navInstall">설치</a>
+          <a href="#how" data-i18n="navHow">작동 방식</a>
+          <a href="#platforms" data-i18n="navPlatforms">호환성</a>
+        </nav>
+        <div class="language-switcher" data-language-switcher>
+          <button
+            class="language-toggle"
+            id="language-toggle"
+            type="button"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+          >
+            <span class="site-flag-wrap" id="language-current-flag" aria-hidden="true"></span>
+            <span id="language-current-label">한국어</span>
+            <span class="language-chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="language-menu" id="language-menu" role="listbox" aria-label="사이트 언어" data-i18n-aria="languageMenuAria"></div>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="heroEyebrow">0.9.2-beta.1 · language learning browser extension</p>
+          <div class="hero-title-lockup">
+            <span class="logo-orb hero-app-icon"><img src="./assets/icon-white.svg" alt="" /></span>
+            <h1>DictionEvery</h1>
+          </div>
+          <p class="lead" data-i18n="heroLead">
+            데스크톱 웹브라우저에서 모르는 단어를 선택하고, 원하는 도착언어로 뜻과 예문을 확인한 뒤
+            단어장과 통합 테스트로 복습하는 브라우저 플러그인입니다.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#install" data-i18n="heroPrimary">설치 파일 보기</a>
+            <a class="button secondary" href="#how" data-i18n="heroSecondary">작동 방식 보기</a>
+          </div>
+          <div class="status-line" role="list" aria-label="지원 상태">
+            <span role="listitem" data-i18n="statusChrome">Chrome 준비 완료</span>
+            <span role="listitem" data-i18n="statusSafari">Safari용 준비됨</span>
+            <span role="listitem" data-i18n="statusSamsung">데스크톱 웹 환경 중심</span>
+          </div>
+        </div>
+
+        <div class="product-stage" aria-label="DictionEvery 데스크톱 웹 작동 예시" data-i18n-aria="productStageAria">
+          <div class="browser-shell">
+            <div class="browser-toolbar">
+              <div class="browser-window-dots" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="browser-address" data-i18n="browserAddress">https://example.com/articles/language</div>
+              <div class="browser-extension-chip">
+                <span class="logo-orb toolbar-logo"><img src="./assets/icon-white.svg" alt="" /></span>
+                <span data-i18n="browserChip">웹 확장 실행 중</span>
+              </div>
+            </div>
+            <div class="browser-workspace">
+              <div class="sample-page">
+                <p class="sample-title">The Daily Heller</p>
+                <p>
+                  Various books and exhibits attest to the innovative
+                  <span class="selection-demo-anchor">
+                    <button class="selection-chip" type="button">
+                      <span class="logo-orb chip-logo"><img src="./assets/icon-white.svg" alt="" /></span>
+                      <span data-i18n="selectionChip">에서 찾기</span>
+                    </button>
+                    <span class="selected-word">heritage</span>
+                  </span>
+                  of language and typography.
+                </p>
+              </div>
+              <aside class="extension-panel">
+                <div class="panel-top">
+                  <span class="logo-orb panel-logo"><img src="./assets/icon-white.svg" alt="" /></span>
+                  <strong>DictionEvery</strong>
+                  <span class="menu-mark">☰</span>
+                </div>
+                <div class="search-pill">
+                  <div class="demo-search-input" dir="ltr">
+                    <span>heritage</span>
+                    <span class="demo-search-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" role="img">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <path d="m20 20-4-4"></path>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="dict-card">
+                  <div class="word-row">
+                    <h2>heritage</h2>
+                    <span>🔊</span>
+                  </div>
+                  <span class="label" data-i18n="panelTargetLabel">도착언어</span>
+                  <div class="language-pill">
+                    <span class="site-flag-wrap" data-demo-flag aria-hidden="true"></span>
+                    <span data-demo-language-label>한국어</span>
+                  </div>
+                  <span class="label" data-i18n="panelMeaningLabel">뜻</span>
+                  <ol>
+                    <li data-i18n="panelMeaningOne">유산 · 이전 세대가 물려준 것</li>
+                    <li data-i18n="panelMeaningTwo">문화재 · 역사적 가치가 있는 것</li>
+                  </ol>
+                </div>
+                <div class="panel-bottom">
+                  <span>‹</span>
+                  <span>⌂</span>
+                  <span>＋</span>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="install">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="installEyebrow">설치</p>
+          <h2 data-i18n="installTitle">사용하는 브라우저에 맞게 설치하기</h2>
+          <p data-i18n="installLead">
+            데스크톱에서 쓰는 브라우저를 선택해 DictionEvery를 설치하세요. 설치 후 웹페이지에서
+            단어를 선택하면 뜻 확인, 저장, 복습까지 한 흐름으로 이어집니다.
+          </p>
+        </div>
+
+        <div class="install-grid">
+          <article class="install-card recommended">
+            <div class="card-top">
+              <span class="platform-icon"><img src="./assets/browser-chrome.svg" alt="" /></span>
+              <div>
+                <h3>Chrome</h3>
+                <p data-i18n="chromeSubtitle">Chrome에서 가장 먼저 체험하기 좋은 버전</p>
+              </div>
+            </div>
+            <p data-i18n="chromeBody">
+              Chrome에서 단어 선택 버튼, 사전 패널, 단어장, 통합 테스트를 모두 사용할 수 있습니다.
+              데스크톱 웹에서 DictionEvery를 시작하기 좋은 선택입니다.
+            </p>
+            <a class="download" data-download="chrome" href="./downloads/DictionEvery-chrome-webstore-0.9.2-beta.1-upload.zip" download>
+              <span data-i18n="chromeDownload">Chrome용 다운로드</span>
+            </a>
+          </article>
+
+          <article class="install-card">
+            <div class="card-top">
+              <span class="platform-icon"><img src="./assets/browser-edge.png" alt="" /></span>
+              <div>
+                <h3>Microsoft Edge</h3>
+                <p data-i18n="edgeSubtitle">Microsoft Edge에 맞춘 버전</p>
+              </div>
+            </div>
+            <p data-i18n="edgeBody">
+              Edge에서도 웹페이지의 단어를 바로 찾고 저장할 수 있습니다. Windows 데스크톱 환경에서
+              익숙한 브라우저 흐름 그대로 사용할 수 있습니다.
+            </p>
+            <a class="download" data-download="edge" href="./downloads/DictionEvery-edge-addons-0.9.2-beta.1.zip" download>
+              <span data-i18n="edgeDownload">Edge용 다운로드</span>
+            </a>
+          </article>
+
+          <article class="install-card">
+            <div class="card-top">
+              <span class="platform-icon"><img src="./assets/browser-samsung.png" alt="" /></span>
+              <div>
+                <h3>Samsung Browser for Windows</h3>
+                <p data-i18n="samsungSubtitle">Samsung Browser for Windows용 버전</p>
+              </div>
+            </div>
+            <p data-i18n="samsungBody">
+              Windows용 Samsung Browser에서 웹문서와 학습 자료를 읽을 때 단어를 바로 찾고 저장할 수
+              있도록 준비한 버전입니다.
+            </p>
+            <a class="download" data-download="samsung" href="./downloads/DictionEvery-chrome-webstore-0.9.2-beta.1-upload.zip" download>
+              <span data-i18n="samsungDownload">Samsung Browser용 다운로드</span>
+            </a>
+          </article>
+
+          <article class="install-card">
+            <div class="card-top">
+              <span class="platform-icon"><img src="./assets/browser-safari.png" alt="" /></span>
+              <div>
+                <h3>Safari on macOS</h3>
+                <p data-i18n="safariSubtitle">macOS Safari용 버전</p>
+              </div>
+            </div>
+            <p data-i18n="safariBody">
+              Mac에서 Safari를 주 브라우저로 쓰는 사용자를 위한 버전입니다. 웹페이지를 읽으며
+              모르는 단어를 DictionEvery 패널로 바로 정리할 수 있습니다.
+            </p>
+            <a class="download" data-download="safari" href="./downloads/DictionEvery-safari-extension-root-0.9.2-beta.1.zip" download>
+              <span data-i18n="safariDownload">Safari용 다운로드</span>
+            </a>
+          </article>
+
+          <article class="install-card">
+            <div class="card-top">
+              <span class="platform-icon"><img src="./assets/browser-firefox.png" alt="" /></span>
+              <div>
+                <h3>Firefox</h3>
+                <p data-i18n="firefoxSubtitle">Firefox 데스크톱용 버전</p>
+              </div>
+            </div>
+            <p data-i18n="firefoxBody">
+              Firefox 사용자를 위해 따로 준비한 버전입니다. 브라우저를 바꿔도 단어 저장, 뜻 확인,
+              복습 흐름은 같은 방식으로 이어집니다.
+            </p>
+            <a class="download" data-download="firefox" href="./downloads/DictionEvery-firefox-0.9.2-beta.1.zip" download>
+              <span data-i18n="firefoxDownload">Firefox용 다운로드</span>
+            </a>
+          </article>
+
+          <article class="install-card">
+            <div class="card-top">
+              <span class="platform-icon"><img src="./assets/browser-yandex.svg" alt="" /></span>
+              <div>
+                <h3>Yandex Browser</h3>
+                <p data-i18n="yandexSubtitle">Yandex Browser 데스크톱용 버전</p>
+              </div>
+            </div>
+            <p data-i18n="yandexBody">
+              Yandex Browser에서 읽는 중 선택한 단어를 빠르게 사전과 단어장으로 연결합니다.
+              데스크톱 웹 독해 흐름에 맞춰 사용할 수 있습니다.
+            </p>
+            <a class="download" data-download="yandex" href="./downloads/DictionEvery-chrome-webstore-0.9.2-beta.1-upload.zip" download>
+              <span data-i18n="yandexDownload">Yandex Browser용 다운로드</span>
+            </a>
+          </article>
+
+          <article class="install-card">
+            <div class="card-top">
+              <span class="platform-icon"><img src="./assets/browser-whale.png" alt="" /></span>
+              <div>
+                <h3>Naver Whale</h3>
+                <p data-i18n="whaleSubtitle">Naver Whale용 버전</p>
+              </div>
+            </div>
+            <p data-i18n="whaleBody">
+              Whale에서 웹문서와 학습 자료를 읽을 때 DictionEvery를 함께 사용할 수 있도록
+              준비한 버전입니다. 뜻 확인과 복습 기능을 같은 흐름으로 제공합니다.
+            </p>
+            <a class="download" data-download="whale" href="./downloads/DictionEvery-whale-store-0.9.2-beta.1.zip" download>
+              <span data-i18n="whaleDownload">Whale용 다운로드</span>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section feature-band" id="how">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="howEyebrow">작동 방식</p>
+          <h2 data-i18n="howTitle">읽으면서 바로 저장하고 복습합니다</h2>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <span>1</span>
+            <h3 data-i18n="stepOneTitle">단어 선택</h3>
+            <p data-i18n="stepOneBody">데스크톱 웹페이지에서 단어를 선택하면 작은 검색 버튼이 뜹니다.</p>
+          </div>
+          <div class="step">
+            <span>2</span>
+            <h3 data-i18n="stepTwoTitle">도착언어별 뜻 확인</h3>
+            <p data-i18n="stepTwoBody">한국어, 영어, 러시아어, 페르시아어 등 선택한 언어별로 뜻과 예문을 확인합니다.</p>
+          </div>
+          <div class="step">
+            <span>3</span>
+            <h3 data-i18n="stepThreeTitle">단어장과 테스트</h3>
+            <p data-i18n="stepThreeBody">숙련도 1-5를 관리하고 카드, 뜻 고르기, 듣고 입력하기를 섞어 복습합니다.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="platforms">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="compatEyebrow">Compatibility</p>
+          <h2 data-i18n="compatTitle">지원 브라우저</h2>
+        </div>
+        <div class="compat-table" role="table" aria-label="브라우저 호환 상태" data-i18n-aria="compatAria">
+          <div role="row">
+            <strong role="cell">Chrome</strong>
+            <span role="cell" data-i18n="compatChrome">Chrome 데스크톱에서 사용할 수 있는 기본 버전</span>
+          </div>
+          <div role="row">
+            <strong role="cell">Microsoft Edge</strong>
+            <span role="cell" data-i18n="compatEdge">Microsoft Edge 데스크톱 환경 지원</span>
+          </div>
+          <div role="row">
+            <strong role="cell">Samsung Browser for Windows</strong>
+            <span role="cell" data-i18n="compatSamsung">Windows용 Samsung Browser 호환 버전 제공</span>
+          </div>
+          <div role="row">
+            <strong role="cell">Safari macOS</strong>
+            <span role="cell" data-i18n="compatSafari">macOS Safari용 버전 제공</span>
+          </div>
+          <div role="row">
+            <strong role="cell">Firefox</strong>
+            <span role="cell" data-i18n="compatFirefox">Firefox 데스크톱용 버전 제공</span>
+          </div>
+          <div role="row">
+            <strong role="cell">Yandex Browser</strong>
+            <span role="cell" data-i18n="compatYandex">Yandex Browser 호환 버전 제공</span>
+          </div>
+          <div role="row">
+            <strong role="cell">Naver Whale</strong>
+            <span role="cell" data-i18n="compatWhale">Naver Whale 호환 버전 제공</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span data-release-title>DictionEvery · 0.9.2-beta.1</span>
+      <span data-i18n="footerNote">Chrome, Edge, Safari, Samsung Browser, Firefox, Yandex, Whale 데스크톱용 DictionEvery 소개 페이지</span>
+    </footer>
+  </body>
+</html>
