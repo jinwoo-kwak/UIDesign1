@@ -1,0 +1,604 @@
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@800;900&family=Oswald:wght@500;700&display=swap");
+
+:root {
+  --paper: #fff;
+  --ink: #0b0d0e;
+  --red: #d71920;
+  --yellow: #e1ad19;
+  --blue: #213e68;
+  --muted: #6a6a6a;
+  --line: rgba(11, 13, 14, .24);
+  --display: "Alumni Sans", "Oswald", "Arial Narrow", Impact, sans-serif;
+  --text: "Oswald", "Arial Narrow", Impact, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, .035) 1px, transparent 1px) 0 0 / 72px 72px,
+    linear-gradient(0deg, rgba(0, 0, 0, .03) 1px, transparent 1px) 0 0 / 72px 72px,
+    var(--paper);
+  color: var(--ink);
+  font-family: var(--text);
+  overflow-x: hidden;
+}
+
+.back-home {
+  position: fixed;
+  top: 22px;
+  left: 24px;
+  z-index: 10;
+  display: inline-grid;
+  place-items: center;
+  min-height: 42px;
+  padding: 0 14px;
+  background: var(--ink);
+  color: #fff;
+  border: 3px solid var(--ink);
+  box-shadow: 7px 7px 0 var(--red);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+#align {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 78px 28px 42px;
+}
+
+#stage {
+  position: relative;
+  width: 960px;
+  height: 600px;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: var(--paper);
+  border: 5px solid var(--ink);
+  box-shadow: 18px 18px 0 var(--ink);
+}
+
+.poster-lines {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(11, 13, 14, .1) 1px, transparent 1px) 0 0 / 44px 44px,
+    linear-gradient(0deg, rgba(11, 13, 14, .08) 1px, transparent 1px) 0 0 / 44px 44px;
+  opacity: .75;
+}
+
+.red-plane,
+.black-plane,
+.table-plane {
+  position: absolute;
+  pointer-events: none;
+}
+
+.red-plane {
+  left: 110px;
+  top: -130px;
+  width: 290px;
+  height: 850px;
+  background: var(--red);
+  transform: skewX(-19deg) rotate(10deg);
+}
+
+.black-plane {
+  right: -90px;
+  bottom: -24px;
+  width: 620px;
+  height: 150px;
+  background: var(--ink);
+  transform: rotate(-9deg);
+}
+
+.table-plane {
+  left: -20px;
+  right: -20px;
+  bottom: 0;
+  height: 188px;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, .08) 1px, transparent 1px) 0 0 / 54px 54px,
+    #f5f5f5;
+  border-top: 4px solid var(--ink);
+}
+
+.object {
+  position: absolute;
+}
+
+.blueprint {
+  left: 210px;
+  bottom: 88px;
+  width: 455px;
+  height: 292px;
+  background:
+    linear-gradient(90deg, rgba(33, 62, 104, .22) 1px, transparent 1px) 0 0 / 22px 22px,
+    linear-gradient(0deg, rgba(33, 62, 104, .22) 1px, transparent 1px) 0 0 / 22px 22px,
+    #f8fbff;
+  border: 4px solid var(--ink);
+  transform: rotate(-4deg);
+  box-shadow: 14px 14px 0 rgba(215, 25, 32, .9);
+}
+
+.plan-grid {
+  position: absolute;
+  inset: 18px;
+  border: 2px solid rgba(33, 62, 104, .48);
+}
+
+.plan-core,
+.plan-wing,
+.plan-tower,
+.plan-axis {
+  position: absolute;
+  background: transparent;
+  border: 4px solid var(--blue);
+}
+
+.plan-core {
+  right: 58px;
+  bottom: 70px;
+  width: 146px;
+  height: 94px;
+}
+
+.plan-core::before,
+.plan-core::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  height: 4px;
+  background: var(--blue);
+}
+
+.plan-core::before {
+  top: 24px;
+}
+
+.plan-core::after {
+  top: 54px;
+}
+
+.wing-a {
+  left: 78px;
+  bottom: 80px;
+  width: 232px;
+  height: 46px;
+}
+
+.wing-b {
+  right: 24px;
+  bottom: 52px;
+  width: 118px;
+  height: 38px;
+}
+
+.plan-tower {
+  right: 148px;
+  bottom: 156px;
+  width: 42px;
+  height: 96px;
+  background: rgba(11, 13, 14, .08);
+}
+
+.axis-a {
+  left: 40px;
+  bottom: 54px;
+  width: 330px;
+  height: 0;
+  border-width: 3px 0 0;
+  transform: rotate(-27deg);
+}
+
+.axis-b {
+  left: 258px;
+  top: 28px;
+  width: 0;
+  height: 230px;
+  border-width: 0 0 0 3px;
+  transform: rotate(13deg);
+}
+
+.plan-label {
+  position: absolute;
+  left: 20px;
+  bottom: 16px;
+  padding: 4px 8px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.scale-ruler {
+  left: 114px;
+  bottom: 125px;
+  width: 410px;
+  height: 38px;
+  background: var(--yellow);
+  border: 4px solid var(--ink);
+  transform: rotate(9deg);
+  z-index: 4;
+}
+
+.scale-ruler span {
+  position: absolute;
+  bottom: 0;
+  width: 3px;
+  background: var(--ink);
+}
+
+.scale-ruler span:nth-child(1) { left: 42px; height: 16px; }
+.scale-ruler span:nth-child(2) { left: 112px; height: 28px; }
+.scale-ruler span:nth-child(3) { left: 184px; height: 16px; }
+.scale-ruler span:nth-child(4) { left: 258px; height: 28px; }
+.scale-ruler span:nth-child(5) { left: 334px; height: 16px; }
+
+.triangle {
+  right: 166px;
+  bottom: 94px;
+  width: 210px;
+  height: 165px;
+  border-left: 105px solid transparent;
+  border-right: 105px solid transparent;
+  border-bottom: 165px solid rgba(255, 255, 255, .88);
+  filter: drop-shadow(0 0 0 var(--ink)) drop-shadow(7px 7px 0 rgba(11, 13, 14, .24));
+  transform: rotate(11deg);
+  z-index: 5;
+}
+
+.triangle::after {
+  content: "";
+  position: absolute;
+  left: -72px;
+  top: 34px;
+  width: 134px;
+  height: 4px;
+  background: var(--ink);
+  transform: rotate(37deg);
+}
+
+.triangle-hole {
+  position: absolute;
+  left: -42px;
+  top: 58px;
+  width: 74px;
+  height: 74px;
+  border-left: 37px solid transparent;
+  border-right: 37px solid transparent;
+  border-bottom: 62px solid var(--paper);
+}
+
+.compass {
+  left: 668px;
+  top: 104px;
+  width: 172px;
+  height: 280px;
+  z-index: 6;
+}
+
+.joint {
+  position: absolute;
+  left: 71px;
+  top: 4px;
+  width: 30px;
+  height: 30px;
+  background: var(--ink);
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px #fff;
+}
+
+.leg {
+  position: absolute;
+  top: 26px;
+  width: 7px;
+  height: 230px;
+  background: var(--ink);
+  transform-origin: top center;
+}
+
+.leg-left {
+  left: 81px;
+  transform: rotate(18deg);
+}
+
+.leg-right {
+  left: 83px;
+  transform: rotate(-26deg);
+}
+
+.needle {
+  position: absolute;
+  left: 13px;
+  bottom: 0;
+  width: 26px;
+  height: 42px;
+  background: var(--red);
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.pencil {
+  left: 554px;
+  bottom: 54px;
+  width: 310px;
+  height: 32px;
+  transform: rotate(-18deg);
+  z-index: 7;
+}
+
+.pencil-body {
+  position: absolute;
+  left: 34px;
+  right: 34px;
+  top: 4px;
+  height: 24px;
+  background: var(--red);
+  border: 4px solid var(--ink);
+}
+
+.pencil-body::after {
+  content: "";
+  position: absolute;
+  left: 84px;
+  top: -4px;
+  bottom: -4px;
+  width: 24px;
+  background: var(--ink);
+}
+
+.pencil-point {
+  position: absolute;
+  right: 0;
+  top: 4px;
+  width: 38px;
+  height: 24px;
+  background: var(--yellow);
+  border: 4px solid var(--ink);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.pencil-end {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 36px;
+  height: 24px;
+  background: #fff;
+  border: 4px solid var(--ink);
+}
+
+.ink {
+  left: 72px;
+  bottom: 86px;
+  width: 104px;
+  height: 164px;
+  z-index: 6;
+}
+
+.ink-cap {
+  position: absolute;
+  left: 32px;
+  top: 0;
+  width: 40px;
+  height: 34px;
+  background: var(--ink);
+}
+
+.ink-neck {
+  position: absolute;
+  left: 25px;
+  top: 30px;
+  width: 54px;
+  height: 34px;
+  background: #fff;
+  border: 4px solid var(--ink);
+}
+
+.ink-body {
+  position: absolute;
+  left: 9px;
+  bottom: 0;
+  width: 86px;
+  height: 108px;
+  background: var(--ink);
+  clip-path: polygon(12% 0, 88% 0, 100% 100%, 0 100%);
+}
+
+.ink-label {
+  position: absolute;
+  left: 22px;
+  bottom: 34px;
+  width: 60px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.paper-roll {
+  right: 62px;
+  bottom: 214px;
+  width: 170px;
+  height: 54px;
+  background: #fff;
+  border: 4px solid var(--ink);
+  transform: rotate(-8deg);
+  z-index: 4;
+}
+
+.roll-face {
+  position: absolute;
+  right: -4px;
+  top: -4px;
+  width: 58px;
+  height: 58px;
+  border: 4px solid var(--ink);
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff 0 14px, var(--yellow) 15px 20px, #fff 21px);
+}
+
+.model-blocks {
+  right: 82px;
+  bottom: 58px;
+  width: 174px;
+  height: 130px;
+  z-index: 8;
+}
+
+.block {
+  position: absolute;
+  border: 4px solid var(--ink);
+}
+
+.block-red {
+  left: 38px;
+  bottom: 0;
+  width: 82px;
+  height: 84px;
+  background: var(--red);
+  transform: skewY(-12deg);
+}
+
+.block-black {
+  left: 0;
+  bottom: 2px;
+  width: 66px;
+  height: 54px;
+  background: var(--ink);
+  transform: skewY(18deg);
+}
+
+.block-yellow {
+  right: 0;
+  bottom: 20px;
+  width: 70px;
+  height: 110px;
+  background: var(--yellow);
+  transform: skewY(-10deg);
+}
+
+.caption {
+  position: absolute;
+  left: 34px;
+  top: 34px;
+  z-index: 8;
+  display: grid;
+  gap: 3px;
+  color: var(--ink);
+  text-transform: uppercase;
+}
+
+.caption strong {
+  font-family: var(--display);
+  font-size: 58px;
+  line-height: .8;
+}
+
+.caption span {
+  width: fit-content;
+  padding: 5px 9px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+@media (max-width: 760px) {
+  .back-home {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+  }
+
+  #align {
+    min-height: 100svh;
+    padding: 74px 14px 28px;
+  }
+
+  #stage {
+    width: 100%;
+    max-width: 430px;
+    height: 690px;
+    box-shadow: 10px 10px 0 var(--ink);
+  }
+
+  .caption {
+    left: 20px;
+    top: 86px;
+  }
+
+  .caption strong {
+    font-size: 46px;
+  }
+
+  .red-plane {
+    left: 20px;
+    width: 190px;
+  }
+
+  .blueprint {
+    left: 34px;
+    bottom: 220px;
+    width: 330px;
+    height: 238px;
+  }
+
+  .scale-ruler {
+    left: 36px;
+    bottom: 184px;
+    width: 300px;
+  }
+
+  .triangle {
+    right: 42px;
+    bottom: 128px;
+    transform: rotate(9deg) scale(.78);
+    transform-origin: bottom right;
+  }
+
+  .compass {
+    left: 248px;
+    top: 150px;
+    transform: scale(.72);
+    transform-origin: top left;
+  }
+
+  .pencil {
+    left: 128px;
+    bottom: 76px;
+    transform: rotate(-18deg) scale(.82);
+    transform-origin: left center;
+  }
+
+  .ink {
+    left: 26px;
+    bottom: 68px;
+    transform: scale(.84);
+    transform-origin: bottom left;
+  }
+
+  .paper-roll {
+    right: 16px;
+    bottom: 332px;
+    transform: rotate(-8deg) scale(.76);
+    transform-origin: right center;
+  }
+
+  .model-blocks {
+    right: 28px;
+    bottom: 38px;
+    transform: scale(.82);
+    transform-origin: bottom right;
+  }
+}
